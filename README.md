@@ -5,6 +5,7 @@ This is a private repository for my C Language Skill Path projects and notes.
 - helloworld.c : first C program
 - grocerystore.c : initializing variables and inputing them in printf() statement
 - space.c : practicing conditional logic with Switch statement
+- print_date.c : more advanced program using if/else and switch statements
 
 ## Running a C project
 1. Use the built in 'clang' compiler from Apple's Xcode tools to compile the C application.
