@@ -1,6 +1,11 @@
 # Codecademy C Language Skill Path
 This is a private repository for my C Language Skill Path projects and notes.
 
+## Programs and skills practiced
+- helloworld.c : first C program
+- grocerystore.c : initializing variables and inputing them in printf() statement
+- space.c : practicing conditional logic with Switch statement
+
 ## Running a C project
 1. Use the built in 'clang' compiler from Apple's Xcode tools to compile the C application.
 2. Run `clang appname.c -o compiledAppName` command
