@@ -47,5 +47,6 @@ C also has the same ternary conditional statement that JavaScript has:
 `condition ? do something : do something else;`
 
 Logical operators are `&&`, `||`, and `!`.
+
 Relational operators are `>`, `<`, and `==`.
 
