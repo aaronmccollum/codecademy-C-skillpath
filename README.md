@@ -1,5 +1,5 @@
 # Codecademy C Language Skill Path
-This is a private repository for my C Language Skill Path projects and notes.
+This is a repository for my C Language Skill Path projects and notes.
 
 ## Programs and skills practiced
 - helloworld.c : first C program
