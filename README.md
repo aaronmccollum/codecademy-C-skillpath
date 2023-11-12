@@ -50,3 +50,17 @@ Logical operators are `&&`, `||`, and `!`.
 
 Relational operators are `>`, `<`, and `==`.
 
+## Loops
+While loops in C are very similar to JavaScript as well.
+```
+while (condition) {
+  // run this code
+  // iterator
+}
+```
+For loops work when you know how many times you want to loop.
+```
+for (int i = n; condition; iterator) {
+  // code
+}
+```
