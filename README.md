@@ -50,3 +50,17 @@ Logical operators are `&&`, `||`, and `!`.
 
 Relational operators are `>`, `<`, and `==`.
 
+## Loops
+C has similar "while" loops and "for" loops to JavaScript as well. For Loops are used when you know how many times you want to iterate through something, and a While Loop can be used for the opposite - when you are unsure how many times a loop will need to run.
+
+```
+while (condition) {
+  // code here;
+  iterator;
+}
+```
+```
+for (int i; condition; iterator) {
+  //code here;
+}
+```
