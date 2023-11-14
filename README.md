@@ -64,3 +64,10 @@ for (int i; condition; iterator) {
   //code here;
 }
 ```
+
+## Errors
+There are four major error types to know in C. They are found in the following order:
+1. Compile-time errors: usually syntax errors
+2. Link-time errors
+3. Run-time errors: happens during the program running
+4. Logic errors: output isn't what you expect or no output happens
