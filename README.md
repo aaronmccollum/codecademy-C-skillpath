@@ -96,3 +96,15 @@ Multi-dimentional arrays also exist in C. `int myArr[2][3]` is an array of two n
 int rowSize = sizeof(parent) / sizeof(parent[0]);
 int columnSize = sizeof(parent[0]) / sizeof(dataType);
 ```
+
+## Strings
+Strings are arrays in C. You use the "char" data type to start a string, then you provide a name, and lastly you add [] at the end (because it's an array). All array functions are available to strings as a result.
+`char myStr[] = "Hello World";`
+`printf("%s\n", myStr);`
+Entire strings are surrounded by double quotes, but single characters (char) are surrounded by single quotes. Switching them around could cause errors. If you create a string using an array, then you have to list each character index by index in single quotes, and you have to include a null character at the end `'\0'`.
+
+To get the length of a string, you can use `strlen(str)`. But in order to do that, you must include `#include<string.h>` at the top of your application.
+
+To concatenate a string in C, you can use `strcat(dst, src)` to do so. It takes a source string and adds it to the destination string. You can only do two at a time, so multiple strings will need to be done one after the other. The function actually creates a new array with the length of destination + source + 1 and puts both strings into that, then it deletes the place in memory where destination was and replaces it with the new combined string array.
+
+To copy a string to an empty destination, you can use `strcopy(dst, src)` which will copy the source and place it in the destination. The destination string must be long enough to accept the source string plus the extra spot for the null character. You can do this by making a variable like so: `int len = strlen(src) + 1`.
