@@ -99,8 +99,10 @@ int columnSize = sizeof(parent[0]) / sizeof(dataType);
 
 ## Strings
 Strings are arrays in C. You use the "char" data type to start a string, then you provide a name, and lastly you add [] at the end (because it's an array). All array functions are available to strings as a result.
-`char myStr[] = "Hello World";`
-`printf("%s\n", myStr);`
+```
+char myStr[] = "Hello World";
+printf("%s\n", myStr);
+```
 Entire strings are surrounded by double quotes, but single characters (char) are surrounded by single quotes. Switching them around could cause errors. If you create a string using an array, then you have to list each character index by index in single quotes, and you have to include a null character at the end `'\0'`.
 
 To get the length of a string, you can use `strlen(str)`. But in order to do that, you must include `#include<string.h>` at the top of your application.
