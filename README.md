@@ -33,6 +33,15 @@ printf("%d\n", a);
 ```
 This substitutes variable `a` with the `%d` in the string.
 
+The `printf()` function can take 'specifiers' which you can place inside the string to specify the data type you are about to print.
+- %d: for printing integers
+- %f: for printing floating-point numbers
+- %c: for printing characters
+- %s: for printing strings
+- %p: for printing memory addresses
+- %x: for printing hexadecimal values
+
+
 ## Conditionals
 Conditional (if/else) statements in C are very similar to JavaScript. 
 ```
@@ -71,3 +80,19 @@ There are four major error types to know in C. They are found in the following o
 2. Link-time errors
 3. Run-time errors: happens during the program running
 4. Logic errors: output isn't what you expect or no output happens
+
+## Arrays
+Arrays in C are different than other programming languages like JS and Python. In C, an array is a grouping of variables of the same type surrounded by `{ }`. You can create ararys of other data types, but you have to specify how many variables will be in the array with square brackets. With an 'uninitialized' array (array without any values), you have to specify the size so the compiler knows how much memory to allocate for the future variables. With an 'initialized' array, you do not need to specify a variable number in the square brackets, as it is apparent in the array itself. But you will still need to add `[]` to the end of the name.
+```
+int myArray[] = {4, 7, 2, 9};
+```
+Accessing arrays are similar to other languages. `myArray[1] // equals 7`. If you go beyond the last index, or if you use negative indexes, data will be corrupted or a random value will be accessed, as you are accessing another unallocated part of memory.
+
+`sizeof(arr)`: returns an int with the numer of bytes in the array. Great for making 'while' and 'for' loops reusable. This function can also be used on data types itself to find the size per element. Then you can determine the size of an array by dividing the total bytes by the bytes-per-element.
+`int len = sizeof(arr) / sizeof(dataType)`
+
+Multi-dimentional arrays also exist in C. `int myArr[2][3]` is an array of two nested array of three elements each. You can get the sizes of each array with the following:
+```
+int rowSize = sizeof(parent) / sizeof(parent[0]);
+int columnSize = sizeof(parent[0]) / sizeof(dataType);
+```
