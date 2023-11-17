@@ -88,6 +88,8 @@ int myArray[] = {4, 7, 2, 9};
 ```
 Accessing arrays are similar to other languages. `myArray[1] // equals 7`. If you go beyond the last index, or if you use negative indexes, data will be corrupted or a random value will be accessed, as you are accessing another unallocated part of memory.
 
+Arrays are stored in contiguous blocks of memory.
+
 `sizeof(arr)`: returns an int with the numer of bytes in the array. Great for making 'while' and 'for' loops reusable. This function can also be used on data types itself to find the size per element. Then you can determine the size of an array by dividing the total bytes by the bytes-per-element.
 `int len = sizeof(arr) / sizeof(dataType)`
 
