@@ -112,3 +112,28 @@ To get the length of a string, you can use `strlen(str)`. But in order to do tha
 To concatenate a string in C, you can use `strcat(dst, src)` to do so. It takes a source string and adds it to the destination string. You can only do two at a time, so multiple strings will need to be done one after the other. The function actually creates a new array with the length of destination + source + 1 and puts both strings into that, then it deletes the place in memory where destination was and replaces it with the new combined string array.
 
 To copy a string to an empty destination, you can use `strcopy(dst, src)` which will copy the source and place it in the destination. The destination string must be long enough to accept the source string plus the extra spot for the null character. You can do this by making a variable like so: `int len = strlen(src) + 1`.
+
+## Memory Management and Pointers
+Each variable in your program takes up space in memory and it's important to manage that. Int variables take up 4 bytes of memory and doubles take up 8 bytes, for example. C is one of the lanugages that allows the direct access and manipulation of a byte in memory using Pointers.
+
+You declare a variable like normal in C. To declare a pointer and point to the variable, you use the following:
+```
+int myInt;
+int *myIntPtr = &myInt;
+```
+The &variable uses the Reference Operator, which when used next to the variable name, will print out the address of the variable. So basically, a reference operator will be saved into a variable, and that is what a pointer is.
+
+You only need to include the asterisk when you first declare the pointer. The asterisk is called the deference operator, and you can use it alongside the pointer name to get the value of what is stored at the address. You can also use it to change the value.
+
+You can add and subtract pointers. It's important to remember the data type you are working with, because this affects the final location. If an integer is 4 bytes long, and the pointer value is at 100, if you "add 1" to the pointer, the value is now 104. If you add 3, the value is 112. It's the same thing with subtraction. Basically, it moves the pointer by X (the increment) * the size of the data type you are working with (which is why you should know how much each data type is). You are not allowed to multiply or divide. Be careful with pointer arithmetic, as it can cause a program to crash if a mistake is made.
+
+You can work with arrays and strings to change their informaiton using pointers. You can create a While or For loop to control how many tiems you iterate (using `strlen()` or `sizeof()` if needed), and you can change the value of each pointer at each element of the array or string. This is more dangerous, but with more complex programs it is good to know and use.
+```
+// Takes an array, works backwards from the last element to the first, and prints the value the pointer holds
+int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+int* ptr = &arr[9];
+for (int i = 0; i < 10; i++) {
+  printf("%i\n", *ptr);
+  ptr -= 1;
+}
+```
