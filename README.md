@@ -137,3 +137,18 @@ for (int i = 0; i < 10; i++) {
   ptr -= 1;
 }
 ```
+For developers, Memory Maps are how we can view memory and the data stored there. They show the structure, address, and data of each location in memory, and they usually use hexadecimal numbers for addresses. To find the size of a variable in memory, you can use the `sizeof()` function. The address of the variable is the first space where the variable's chain of memory allocation begins.
+
+Reference operator: allows us to to obtain the address of a variable
+Dereference operator: allows us to read and write data to a specific location in memory
+
+Memory errors can be tricky as they won't always be caught at compile time or run time, but they can affect the program. You have to be very accurate when accessing a spot in memory.
+
+C has two ways to reserve memory: the stack and the heap. When you declare a variable, it will be placed on the stack and that space in memory will be freed once there is no longer any need for it. The heap is a way for you to dynamically allocate a certain amount of memory to be used, and it will stay avaiable until released by the developer. If the developer does not release it, it will cause 'memory leak' which will hurt the program.
+
+There are four main functions to use to allocate and free memory in C. They are part of the stdlib.h library, so they must be imported:
+- `malloc()`: reserve bytes on the heap
+- `calloc()`: reserve memory for data types
+- `realloc()`: expand or contract the reserved block of memory
+- `free()`: release previously allocated memory (which will be used a lot)
+
