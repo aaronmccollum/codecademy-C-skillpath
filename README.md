@@ -1,6 +1,19 @@
 # Codecademy C Language Skill Path
 This is a repository for my C Language Skill Path projects and notes.
 
+## Table of Contents
+- [Programs and skills practiced](#programs-and-skills-practiced)
+- [Running a C project](#running-a-c-project)
+- [Useful tips for writing C programs](#useful-tips-for-writing-c-programs)
+- [Declaring Variables](#declaring-variables)
+- [Printing Variables](#printing-variables)
+- [Conditionals](#conditionals)
+- [Loops](#loops)
+- [Errors](#errors)
+- [Arrays](#arrays)
+- [Strings](#strings)
+- [Memory Management and Pointers](#memory-management-and-pointers)
+
 ## Programs and skills practiced
 - helloworld.c : first C program
 - grocerystore.c : initializing variables and inputing them in printf() statement
